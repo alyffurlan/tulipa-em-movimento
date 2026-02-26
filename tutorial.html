@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tutorial de Instalação – TulipaMouse</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/tutorial.css">
+<script>(function(){const t=localStorage.getItem('tulipa-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
+</head>
+<body>
+
+<!-- ════════════════ NAV ════════════════ -->
+<nav id="mainNav">
+  <a href="index.html" class="logo">
+    <div class="logo-icon">
+      <svg viewBox="0 0 22 22" fill="none"><path d="M11 20C11 20 6 16 6 11C6 8 8.5 5.5 11 5.5C13.5 5.5 16 8 16 11C16 16 11 20 11 20Z" fill="white"/><path d="M11 5.5C11 5.5 8 2.5 7 0C9 1.5 10 3.5 11 5.5Z" fill="rgba(255,255,255,0.65)"/><path d="M11 5.5C11 5.5 14 2.5 15 0C13 1.5 12 3.5 11 5.5Z" fill="rgba(255,255,255,0.65)"/><rect x="10.2" y="5.5" width="1.6" height="14.5" rx="0.8" fill="rgba(255,255,255,0.5)"/></svg>
+    </div>
+    TulipaMouse
+  </a>
+
+  <ul>
+    <li><a href="index.html" class="nav-link">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6L8 1l6 5v8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/><polyline points="6,15 6,9 10,9 10,15"/></svg>
+      Início
+    </a></li>
+    <li><a href="index.html#features" class="nav-link">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="1" y="1" width="6" height="6" rx="1.2"/><rect x="9" y="1" width="6" height="6" rx="1.2"/><rect x="1" y="9" width="6" height="6" rx="1.2"/><rect x="9" y="9" width="6" height="6" rx="1.2"/></svg>
+      Recursos
+    </a></li>
+    <li><a href="index.html#depoimentos" class="nav-link">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 10c0 .9-.7 1.5-1.5 1.5H4L1.5 14V3.5C1.5 2.7 2.2 2 3 2h9.5c.8 0 1.5.7 1.5 1.5V10z"/></svg>
+      Depoimentos
+    </a></li>
+    <li><a href="tutorial.html" class="nav-link active">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="3,2 13,8 3,14"/></svg>
+      Tutorial
+    </a></li>
+    <li class="nav-divider"></li>
+    <li><button class="theme-toggle" aria-label="Mudar tema">
+      <svg class="icon-moon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M13.5 10A6 6 0 1 1 6 2.5a4.5 4.5 0 0 0 7.5 7.5z"/></svg>
+      <svg class="icon-sun"  viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="8" cy="8" r="2.8"/><path d="M8 1v1.5M8 13.5V15M1 8h1.5M13.5 8H15M3.2 3.2l1 1M11.8 11.8l1 1M12.8 3.2l-1 1M4.2 11.8l-1 1"/></svg>
+    </button></li>
+    <li><a href="analise.html" class="nav-cta active-cta">
+      Analisar Movimento
+    </a></li>
+  </ul>
+
+  <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="nav-mobile" id="navMobile">
+  <a href="index.html"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.25 6.75L9 1.5l6.75 5.25v9a1.13 1.13 0 0 1-1.13 1.13H3.38A1.13 1.13 0 0 1 2.25 15.75z"/><polyline points="6.75,17 6.75,10 11.25,10 11.25,17"/></svg>Início</a>
+  <a href="index.html#features"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="1" y="1" width="7" height="7" rx="1.5"/><rect x="10" y="1" width="7" height="7" rx="1.5"/><rect x="1" y="10" width="7" height="7" rx="1.5"/><rect x="10" y="10" width="7" height="7" rx="1.5"/></svg>Recursos</a>
+  <a href="index.html#depoimentos"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 11c0 1-.8 1.8-1.7 1.8H4.5L2 16V4c0-1 .8-1.8 1.7-1.8H14.3c.9 0 1.7.8 1.7 1.8V11z"/></svg>Depoimentos</a>
+  <a href="tutorial.html"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="3,2 15,9 3,16"/></svg>Tutorial</a>
+  <a href="analise.html" class="mobile-cta"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,9 6,13.5 16.5,2.5"/></svg>Analisar Movimento</a>
+</div>
+
+<!-- ════════════════ PAGE HERO ════════════════ -->
+<div class="page-hero">
+  <div class="breadcrumb">
+    <a href="index.html">Início</a><span>/</span><span>Tutorial de Instalação</span>
+  </div>
+  <h1>Tutorial de <em>Instalação</em></h1>
+  <p>Aprenda a instalar e configurar o TulipaMouse em poucos minutos. Disponível para Windows, Mac e Linux.</p>
+</div>
+
+<!-- ════════════════ CONTEÚDO ════════════════ -->
+<div class="tutorial-content">
+
+  <!-- VIDEO -->
+  <div class="video-section">
+    <div class="video-label">Vídeo Tutorial</div>
+    <div class="video-title">Instalação Completa em 5 Minutos</div>
+    <div class="video-wrapper">
+      <!-- Substitua este bloco pelo seu vídeo. Veja comentários abaixo: -->
+      <!-- YouTube: <iframe src="https://www.youtube.com/embed/SEU_ID" frameborder="0" allowfullscreen></iframe> -->
+      <!-- Local:   <video controls><source src="videos/tutorial.mp4" type="video/mp4"></video>               -->
+      <div class="video-placeholder">
+        <div class="play-btn">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M5 3l14 9-14 9V3z" fill="white"/></svg>
+        </div>
+        <div class="placeholder-text">Adicione seu vídeo aqui</div>
+        <div class="placeholder-sub">Veja os comentários no código-fonte desta página</div>
+      </div>
+    </div>
+    <!--Como adicionar o vídeo
+    <div class="embed-instructions">
+      <h3>📌 Como adicionar seu vídeo</h3>
+      <p>Abra <strong>tutorial.html</strong> e substitua o bloco do placeholder por um dos exemplos:</p>
+      <p><strong>YouTube:</strong></p>
+      <code>&lt;iframe src="https://www.youtube.com/embed/SEU_VIDEO_ID"
+  title="Tutorial TulipaMouse" frameborder="0"
+  allow="autoplay; encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;</code>
+      <p style="margin-top:0.8rem;"><strong>Arquivo local .mp4:</strong></p>
+      <code>&lt;video controls poster="videos/capa.jpg"&gt;
+  &lt;source src="videos/tutorial.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code>
+    </div>-->
+  </div>
+
+
+  <!-- CAPÍTULOS -->
+  <div class="chapters-section">
+    <h2>Capítulos do Tutorial</h2>
+    <div class="chapters">
+      <a class="chapter" href="#"><div class="chapter-num">1</div><div class="chapter-title">Introdução e requisitos do sistema</div><div class="chapter-time">00:00</div><div class="chapter-arrow">▶</div></a>
+      <a class="chapter" href="#"><div class="chapter-num">2</div><div class="chapter-title">Baixando o instalador</div><div class="chapter-time">00:42</div><div class="chapter-arrow">▶</div></a>
+      <a class="chapter" href="#"><div class="chapter-num">3</div><div class="chapter-title">Processo de instalação passo a passo</div><div class="chapter-time">01:15</div><div class="chapter-arrow">▶</div></a>
+      <a class="chapter" href="#"><div class="chapter-num">4</div><div class="chapter-title">Calibração inicial do mouse</div><div class="chapter-time">02:30</div><div class="chapter-arrow">▶</div></a>
+      <a class="chapter" href="#"><div class="chapter-num">5</div><div class="chapter-title">Configurando o filtro de tremor</div><div class="chapter-time">03:10</div><div class="chapter-arrow">▶</div></a>
+      <a class="chapter" href="#"><div class="chapter-num">6</div><div class="chapter-title">Ativando o clique automático</div><div class="chapter-time">04:05</div><div class="chapter-arrow">▶</div></a>
+    </div>
+  </div>
+
+  <!-- GUIA DE INSTALAÇÃO -->
+  <div class="steps-section">
+    <h2>🛠 Guia de Instalação Escrito</h2>
+    <div class="install-steps">
+      <div class="install-step">
+        <div class="step-icon-wrap"><div class="step-icon">1</div></div>
+        <div class="step-body">
+          <h4>Verifique os Requisitos</h4>
+          <p>Windows 10/11, macOS 12+ ou Ubuntu 20.04+. Mínimo de 4 GB de RAM e permissão de administrador.</p>
+          <div class="step-note">Não precisa de internet após a instalação</div>
+        </div>
+      </div>
+      <div class="install-step">
+        <div class="step-icon-wrap"><div class="step-icon">2</div></div>
+        <div class="step-body">
+          <h4>Baixe o Instalador</h4>
+          <p>Na página inicial clique em "Baixar TulipaMouse" e escolha a versão do seu sistema. O arquivo tem cerca de 45 MB.</p>
+        </div>
+      </div>
+      <div class="install-step">
+        <div class="step-icon-wrap"><div class="step-icon">3</div></div>
+        <div class="step-body">
+          <h4>Execute o Instalador</h4>
+          <p>No Windows, clique duas vezes no <code>.exe</code>. No Mac, arraste para Aplicativos. No Linux, execute <code>./install.sh</code> no terminal.</p>
+          <div class="step-note">No Windows pode aparecer alerta do SmartScreen — clique "Mais informações" e depois "Executar assim mesmo"</div>
+        </div>
+      </div>
+      <div class="install-step">
+        <div class="step-icon-wrap"><div class="step-icon">4</div></div>
+        <div class="step-body">
+          <h4>Faça a Calibração Inicial</h4>
+          <p>O assistente de calibração abre automaticamente. Siga as instruções movendo o mouse conforme solicitado. Leva cerca de 2 minutos.</p>
+        </div>
+      </div>
+      <div class="install-step">
+        <div class="step-icon-wrap"><div class="step-icon">5</div></div>
+        <div class="step-body">
+          <h4>Ajuste e Use!</h4>
+          <p>Clique no ícone da tulipa na bandeja do sistema para acessar as configurações. Todos os ajustes são aplicados em tempo real em qualquer aplicativo.</p>
+          <div class="step-note">Pronto! O software já está funcionando</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section" id="faq">
+    <h2>Perguntas Frequentes</h2>
+    <div class="faq">
+      <div class="faq-item">
+        <button class="faq-q">O TulipaMouse funciona com qualquer mouse?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Sim! Funciona com qualquer mouse USB, Bluetooth ou touchpad. Age no nível do sistema operacional, sendo compatível com todos os dispositivos de apontamento.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Preciso deixar o programa aberto o tempo todo?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Sim, mas roda em segundo plano consumindo apenas 0,5% de CPU, e inicia automaticamente com o sistema para que você nunca precise abrir manualmente.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Posso usar em sites de banco e outros programas?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Com certeza. Funciona em todo o sistema — navegadores, Office, videoconferência e qualquer outro software. Não interfere com sistemas de segurança ou antifraude.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Como desativo temporariamente sem desinstalar?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Clique no ícone da tulipa na bandeja do sistema e selecione "Pausar". Ou use o atalho Ctrl+Shift+T configurável nas preferências.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Os meus dados de saúde ficam seguros?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Absolutamente. O TulipaMouse funciona 100% offline e nunca envia dados para a internet. Tudo fica armazenado apenas no seu computador.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA STRIP -->
+  <div class="cta-strip">
+    <h3>Pronto para começar?</h3>
+    <p>Baixe agora e experimente por 30 dias sem nenhum compromisso.</p>
+    <a href="index.html#download" class="btn-white">⬇ Baixar TulipaMouse Grátis</a>
+  </div>
+
+</div>
+
+<!-- ════════════════ FOOTER ════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-icon"><svg viewBox="0 0 22 22" fill="none"><path d="M11 20C11 20 6 16 6 11C6 8 8.5 5.5 11 5.5C13.5 5.5 16 8 16 11C16 16 11 20 11 20Z" fill="white"/><path d="M11 5.5C11 5.5 8 2.5 7 0C9 1.5 10 3.5 11 5.5Z" fill="rgba(255,255,255,0.65)"/><path d="M11 5.5C11 5.5 14 2.5 15 0C13 1.5 12 3.5 11 5.5Z" fill="rgba(255,255,255,0.65)"/><rect x="10.2" y="5.5" width="1.6" height="14.5" rx="0.8" fill="rgba(255,255,255,0.5)"/></svg></div>
+          TulipaMouse
+        </a>
+        <p>Software assistivo para pessoas com Parkinson. Devolvendo autonomia e confiança para usar o computador com liberdade.</p>
+        <div class="footer-os">
+          <span class="os-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1" y="1" width="14" height="11" rx="2"/><path d="M5 15h6M8 12v3"/></svg>Windows</span>
+          <span class="os-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8 1C4 1 1 4 1 8c0 3.1 2 5.7 4.7 6.7C5.4 14.5 5 13.8 5 13V11.5C3.7 11.8 3.3 11 3.3 11c-.4-1-.9-1.3-.9-1.3-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.2 1.8.9 2.3.7.1-.5.3-.9.5-1.1-1.7-.2-3.5-.9-3.5-3.8 0-.8.3-1.5.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3.7 0 1.4.1 2 .3 1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 2.9-1.8 3.6-3.5 3.8.3.2.5.7.5 1.4V13c0 .8-.4 1.5-.7 1.7C12 13.7 15 11.1 15 8c0-4-3-7-7-7z" fill="currentColor" stroke="none"/></svg>macOS</span>
+          <span class="os-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><path d="M5 8h6M8 5v6"/></svg>Linux</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Produto</h5>
+        <ul>
+          <li><a href="index.html#features"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,7 6,10 11,4"/></svg>Recursos</a></li>
+          <li><a href="index.html#como"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,7 6,10 11,4"/></svg>Como Funciona</a></li>
+          <li><a href="index.html#download"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,7 6,10 11,4"/></svg>Download Grátis</a></li>
+          <li><a href="analise.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,7 6,10 11,4"/></svg>Analisar Movimento</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Suporte</h5>
+        <ul>
+          <li><a href="tutorial.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,7 6,10 11,4"/></svg>Tutorial de Instalação</a></li>
+          <li><a href="#faq"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,7 6,10 11,4"/></svg>Perguntas Frequentes</a></li>
+          <li><a href="#"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,7 6,10 11,4"/></svg>Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Sobre</h5>
+        <ul>
+          <li><a href="index.html#depoimentos"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,7 6,10 11,4"/></svg>Depoimentos</a></li>
+          <li><a href="#"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,7 6,10 11,4"/></svg>Privacidade</a></li>
+          <li><a href="#"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,7 6,10 11,4"/></svg>Licença</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 <strong>AFAPIT</strong> · Tecnologia Assistiva feita com cuidado · Gratuito para uso pessoal<br>Trabalho acadêmico sem fins lucrativos</div>
+      <div class="footer-social">
+        <a href="#" class="social-btn" aria-label="GitHub"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1C4 1 1 4 1 8c0 3.1 2 5.7 4.7 6.7-.1-.4-.1-.9-.1-1.2v-1.4C4.3 12.4 3.9 11.6 3.9 11.6c-.4-1-.9-1.3-.9-1.3-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.2 1.8.9 2.3.7.1-.5.3-.9.5-1.1-1.7-.2-3.5-.9-3.5-3.8 0-.8.3-1.5.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3.7 0 1.4.1 2 .3 1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 2.9-1.8 3.6-3.5 3.8.3.2.5.7.5 1.4v2.1c0 .3 0 .8-.1 1.2C13 13.7 15 11.1 15 8c0-4-3-7-7-7z"/></svg></a>
+        <a href="#" class="social-btn" aria-label="Email"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="14" height="10" rx="2"/><polyline points="1,4 8,9 15,4"/></svg></a>
+        <a href="tutorial.html" class="social-btn" aria-label="Tutorial em vídeo"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="14" height="10" rx="2"/><polygon points="6.5,6 10.5,8 6.5,10" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/tutorial.js"></script>
+</body>
+</html>

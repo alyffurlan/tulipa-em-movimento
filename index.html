@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TulipaMouse – Liberdade de Movimento</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="img/logo.png">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/index.css">
+<script>(function(){const t=localStorage.getItem('tulipa-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
+</head>
+<body>
+
+<!-- ════════════════ NAV ════════════════ -->
+<nav id="mainNav">
+  <a href="index.html" class="logo">
+    <div class="logo-icon">
+       <svg viewBox="0 0 22 22" fill="none"><path d="M11 20C11 20 6 16 6 11C6 8 8.5 5.5 11 5.5C13.5 5.5 16 8 16 11C16 16 11 20 11 20Z" fill="white"/><path d="M11 5.5C11 5.5 8 2.5 7 0C9 1.5 10 3.5 11 5.5Z" fill="rgba(255,255,255,0.65)"/><path d="M11 5.5C11 5.5 14 2.5 15 0C13 1.5 12 3.5 11 5.5Z" fill="rgba(255,255,255,0.65)"/><rect x="10.2" y="5.5" width="1.6" height="14.5" rx="0.8" fill="rgba(255,255,255,0.5)"/></svg>
+    </div>
+    TulipaMouse
+  </a>
+
+  <ul>
+    <li><a href="index.html" class="nav-link active">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6L8 1l6 5v8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/><polyline points="6,15 6,9 10,9 10,15"/></svg>
+      Início
+    </a></li>
+    <li><a href="#features" class="nav-link">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="1" y="1" width="6" height="6" rx="1.2"/><rect x="9" y="1" width="6" height="6" rx="1.2"/><rect x="1" y="9" width="6" height="6" rx="1.2"/><rect x="9" y="9" width="6" height="6" rx="1.2"/></svg>
+      Recursos
+    </a></li>
+    <li><a href="#depoimentos" class="nav-link">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 10c0 .9-.7 1.5-1.5 1.5H4L1.5 14V3.5C1.5 2.7 2.2 2 3 2h9.5c.8 0 1.5.7 1.5 1.5V10z"/></svg>
+      Depoimentos
+    </a></li>
+    <li><a href="tutorial.html" class="nav-link">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="3,2 13,8 3,14"/></svg>
+      Tutorial
+    </a></li>
+    <li class="nav-divider"></li>
+    <li><button class="theme-toggle" aria-label="Mudar tema">
+      <svg class="icon-moon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M13.5 10A6 6 0 1 1 6 2.5a4.5 4.5 0 0 0 7.5 7.5z"/></svg>
+      <svg class="icon-sun"  viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="8" cy="8" r="2.8"/><path d="M8 1v1.5M8 13.5V15M1 8h1.5M13.5 8H15M3.2 3.2l1 1M11.8 11.8l1 1M12.8 3.2l-1 1M4.2 11.8l-1 1"/></svg>
+    </button></li>
+    <li><a href="analise.html" class="nav-cta active-cta">
+      Analisar Movimento
+    </a></li>
+  </ul>
+
+  <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="nav-mobile" id="navMobile">
+  <a href="index.html"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.25 6.75L9 1.5l6.75 5.25v9a1.13 1.13 0 0 1-1.13 1.13H3.38A1.13 1.13 0 0 1 2.25 15.75z"/><polyline points="6.75,17 6.75,10 11.25,10 11.25,17"/></svg>Início</a>
+  <a href="#features"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="1" y="1" width="7" height="7" rx="1.5"/><rect x="10" y="1" width="7" height="7" rx="1.5"/><rect x="1" y="10" width="7" height="7" rx="1.5"/><rect x="10" y="10" width="7" height="7" rx="1.5"/></svg>Recursos</a>
+  <a href="#depoimentos"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 11c0 1-.8 1.8-1.7 1.8H4.5L2 16V4c0-1 .8-1.8 1.7-1.8H14.3c.9 0 1.7.8 1.7 1.8V11z"/></svg>Depoimentos</a>
+  <a href="tutorial.html"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="3,2 15,9 3,16"/></svg>Tutorial</a>
+  <a href="analise.html" class="mobile-cta"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5,9 6,13.5 16.5,2.5"/></svg>Analisar Movimento</a>
+</div>
+
+<!-- ════════════════ HERO ════════════════ -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-badge"><span></span>Tecnologia Assistiva</div>
+    <h1>Devolvendo o <em>controle</em> às suas mãos</h1>
+    <p class="hero-sub">TulipaMouse é um software inteligente que adapta o movimento do mouse para pessoas com Parkinson, suavizando tremores e ampliando a precisão em tempo real.</p>
+    <div class="hero-actions">
+      <a href="#download" class="btn-primary">Baixar Grátis</a>
+      <a href="analise.html" class="btn-secondary">Analisar Meu Movimento →</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="tulip-wrap">
+      <svg viewBox="0 0 380 380" fill="none">
+        <circle cx="190" cy="190" r="170" fill="#FDE8EB" opacity="0.5"/>
+        <circle cx="190" cy="190" r="130" fill="#FDE8EB" opacity="0.5"/>
+        <path d="M190 370L190 210" stroke="#2D7A27" stroke-width="8" stroke-linecap="round"/>
+        <path d="M190 300C190 300 155 285 145 265C160 270 178 282 190 300Z" fill="#4CAF50"/>
+        <path d="M190 270C190 270 225 255 235 235C220 240 202 252 190 270Z" fill="#4CAF50"/>
+        <path d="M190 100C190 100 175 130 175 165C175 185 182 205 190 210C198 205 205 185 205 165C205 130 190 100 190 100Z" fill="#C8102E"/>
+        <path d="M190 130C190 130 160 120 148 140C140 155 145 178 160 188C168 178 178 158 190 145Z" fill="#E8384F"/>
+        <path d="M190 130C190 130 220 120 232 140C240 155 235 178 220 188C212 178 202 158 190 145Z" fill="#E8384F"/>
+        <path d="M166 150C166 150 140 148 130 168C124 182 135 200 150 204C155 192 160 175 166 162Z" fill="#C8102E" opacity="0.8"/>
+        <path d="M214 150C214 150 240 148 250 168C256 182 245 200 230 204C225 192 220 175 214 162Z" fill="#C8102E" opacity="0.8"/>
+        <g transform="translate(240 240)"><circle r="30" fill="white" opacity="0.95"/><path d="M-6 -12L-6 12L0 8L4 16L7 15L3 7L10 7Z" fill="#C8102E"/></g>
+        <path d="M230 260Q238 255 246 260Q254 265 262 260" stroke="#C8102E" stroke-width="1.5" fill="none" opacity="0.3" stroke-dasharray="4,4"/>
+        <path d="M230 270Q240 262 250 270Q260 278 270 270" stroke="#C8102E" stroke-width="1.5" fill="none" opacity="0.2" stroke-dasharray="4,4"/>
+      </svg>
+      <div class="hero-stats">
+        <div class="num">94%</div>
+        <div class="label">redução de tremor percebida</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ FEATURES ════════════════ -->
+<section class="features" id="features">
+  <div class="section-tag">Recursos</div>
+  <h2>Pensado para quem mais precisa</h2>
+  <p style="color:var(--text-muted);max-width:540px;line-height:1.7;">Desenvolvido em parceria com neurologistas e terapeutas ocupacionais, cada recurso foi projetado para maximizar a independência digital.</p>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg></div>
+      <h3>Filtro de Tremor</h3>
+      <p>Algoritmo adaptativo que detecta e suaviza microtremores em tempo real, sem afetar movimentos intencionais.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5 3.5 9.5 8 11 4.5-1.5 8-6 8-11V6L12 2z"/><circle cx="12" cy="12" r="3" stroke-dasharray="2 2"/></svg></div>
+      <h3>Zona de Repouso</h3>
+      <p>Define uma área de inércia ao redor do cursor — pequenos movimentos involuntários não movem o mouse.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="6"/><line x1="12" y1="3" x2="12" y2="11"/><circle cx="12" cy="15" r="1.2" fill="currentColor" stroke="none"/></svg></div>
+      <h3>Clique Assistido</h3>
+      <p>Clique automático ao manter o cursor parado por um tempo configurável, eliminando a necessidade de pressionar botões.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,17 8,11 13,14 20,6"/><polyline points="17,6 20,6 20,9"/></svg></div>
+      <h3>Análise de Movimento</h3>
+      <p>Visualize gráficos detalhados do seu padrão de movimento e veja a evolução do controle ao longo do tempo.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+      <h3>Perfis Personalizados</h3>
+      <p>Crie e salve perfis diferentes para atividades distintas: navegar na web, escrever e-mails, usar redes sociais.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16.5" r="1.5" fill="currentColor" stroke="none"/></svg></div>
+      <h3>100% Offline</h3>
+      <p>Funciona completamente sem internet. Seus dados de saúde ficam apenas no seu dispositivo, sempre.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ HOW IT WORKS ════════════════ -->
+<section id="como">
+  <div class="how">
+    <div>
+      <div class="section-tag">Como Funciona</div>
+      <h2>Simples de configurar, poderoso na prática</h2>
+      <div class="steps">
+        <div class="step"><div class="step-num">1</div><div><h4>Instale e Calibre</h4><p>Em menos de 5 minutos, o software aprende o padrão de movimento único do seu mouse através de um teste guiado.</p></div></div>
+        <div class="step"><div class="step-num">2</div><div><h4>Ajuste os Filtros</h4><p>Configure a intensidade de suavização, a zona de repouso e a sensibilidade com controles deslizantes simples.</p></div></div>
+        <div class="step"><div class="step-num">3</div><div><h4>Use o Computador Livremente</h4><p>O TulipaMouse age em segundo plano em todos os aplicativos, devolvendo o prazer de usar o computador.</p></div></div>
+      </div>
+      <div style="margin-top:2rem;"><a href="tutorial.html" class="btn-primary">Ver Tutorial Completo</a></div>
+    </div>
+    <div class="how-visual">
+      <svg viewBox="0 0 260 260" fill="none">
+        <rect x="20" y="20" width="220" height="160" rx="12" fill="white" stroke="#E8384F" stroke-width="2"/>
+        <rect x="20" y="20" width="220" height="30" rx="12" fill="#C8102E"/>
+        <circle cx="38" cy="35" r="5" fill="rgba(255,255,255,0.4)"/><circle cx="55" cy="35" r="5" fill="rgba(255,255,255,0.4)"/><circle cx="72" cy="35" r="5" fill="rgba(255,255,255,0.4)"/>
+        <path d="M50 130C60 115 55 125 75 110C85 103 80 118 100 105C110 98 105 112 120 102" stroke="#C8102E" stroke-width="2" stroke-dasharray="5,4" fill="none" opacity="0.5"/>
+        <text x="48" y="145" font-size="9" fill="#C8102E" font-family="DM Sans,sans-serif">tremor</text>
+        <path d="M50 90Q85 85 120 82" stroke="#2D7A27" stroke-width="2.5" fill="none"/>
+        <text x="48" y="78" font-size="9" fill="#2D7A27" font-family="DM Sans,sans-serif">suavizado</text>
+        <path d="M118 76L118 94L122 91L125 97L127 96L124 90L130 90Z" fill="#C8102E"/>
+        <rect x="100" y="180" width="60" height="10" rx="5" fill="#ddd"/><rect x="115" y="190" width="30" height="40" rx="4" fill="#ccc"/>
+      </svg>
+      <p>Movimento <span style="color:#C8102E;font-weight:600;">antes</span> e <span style="color:#2D7A27;font-weight:600;">depois</span> do TulipaMouse</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ TESTIMONIALS ════════════════ -->
+<section class="testimonials" id="depoimentos">
+  <div class="section-tag">Depoimentos</div>
+  <h2>Histórias que inspiram</h2>
+  <div class="test-grid">
+    <div class="test-card">
+      <p>"Eu havia parado de usar o computador há dois anos. Com o TulipaMouse, voltei a enviar e-mails para meus netos sozinho. É libertador."</p>
+      <div class="test-author"><div class="test-avatar">JR</div><div><div class="test-name">João Roberto, 68 anos</div><div class="test-role">Diagnóstico há 5 anos · São Paulo</div></div></div>
+    </div>
+    <div class="test-card">
+      <p>"Como terapeuta ocupacional, recomendo o TulipaMouse para todos meus pacientes. A diferença na qualidade de vida é visível em semanas."</p>
+      <div class="test-author"><div class="test-avatar">MA</div><div><div class="test-name">Dra. Marina Alves</div><div class="test-role">Terapeuta Ocupacional · Hospital das Clínicas</div></div></div>
+    </div>
+    <div class="test-card">
+      <p>"Minha mãe pode usar o computador para videoconferência com a família inteira. O clique automático foi um divisor de águas para ela."</p>
+      <div class="test-author"><div class="test-avatar">CS</div><div><div class="test-name">Carla Souza</div><div class="test-role">Cuidadora familiar · Rio de Janeiro</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ CTA ════════════════ -->
+<section class="cta-section" id="download">
+  <svg style="position:absolute;top:2rem;right:4rem;opacity:0.12;width:90px;" viewBox="0 0 80 80" fill="none"><path d="M40 80C40 80 18 64 18 44C18 30 28 20 40 20C52 20 62 30 62 44C62 64 40 80 40 80Z" fill="white"/><path d="M40 20C40 20 30 10 26 0C32 5 37 12 40 20Z" fill="rgba(255,255,255,0.6)"/><path d="M40 20C40 20 50 10 54 0C48 5 43 12 40 20Z" fill="rgba(255,255,255,0.6)"/></svg>
+  <h2>Comece hoje, de graça</h2>
+  <p>TulipaMouse é gratuito para uso pessoal. Disponível para Windows, Mac e Linux.</p>
+  <a href="#" class="btn-white">⬇ Baixar TulipaMouse</a>
+</section>
+
+<!-- ════════════════ FOOTER ════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+
+      <!-- MARCA -->
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-icon"><svg viewBox="0 0 22 22" fill="none"><path d="M11 20C11 20 6 16 6 11C6 8 8.5 5.5 11 5.5C13.5 5.5 16 8 16 11C16 16 11 20 11 20Z" fill="white"/><path d="M11 5.5C11 5.5 8 2.5 7 0C9 1.5 10 3.5 11 5.5Z" fill="rgba(255,255,255,0.65)"/><path d="M11 5.5C11 5.5 14 2.5 15 0C13 1.5 12 3.5 11 5.5Z" fill="rgba(255,255,255,0.65)"/><rect x="10.2" y="5.5" width="1.6" height="14.5" rx="0.8" fill="rgba(255,255,255,0.5)"/></svg></div>
+          TulipaMouse
+        </a>
+        <p>Software assistivo para pessoas com Parkinson. Devolvendo autonomia e confiança para usar o computador com liberdade.</p>
+        <div class="footer-os">
+          <span class="os-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1" y="1" width="14" height="11" rx="2"/><path d="M5 15h6M8 12v3"/></svg>Windows</span>
+          <span class="os-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8 1C4 1 1 4 1 8c0 3.1 2 5.7 4.7 6.7C5.4 14.5 5 13.8 5 13V11.5C3.7 11.8 3.3 11 3.3 11c-.4-1-.9-1.3-.9-1.3-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.2 1.8.9 2.3.7.1-.5.3-.9.5-1.1-1.7-.2-3.5-.9-3.5-3.8 0-.8.3-1.5.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3.7 0 1.4.1 2 .3 1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 2.9-1.8 3.6-3.5 3.8.3.2.5.7.5 1.4V13c0 .8-.4 1.5-.7 1.7C12 13.7 15 11.1 15 8c0-4-3-7-7-7z" fill="currentColor" stroke="none"/></svg>macOS</span>
+          <span class="os-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6"/><path d="M5 8h6M8 5v6"/></svg>Linux</span>
+        </div>
+      </div>
+
+      <!-- COL: PRODUTO -->
+      <div class="footer-col">
+        <h5>Produto</h5>
+        <ul>
+          <li><a href="#features"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,7 6,10 11,4"/></svg>Recursos</a></li>
+          <li><a href="#como"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,7 6,10 11,4"/></svg>Como Funciona</a></li>
+          <li><a href="#download"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,7 6,10 11,4"/></svg>Download Grátis</a></li>
+          <li><a href="analise.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,7 6,10 11,4"/></svg>Analisar Movimento</a></li>
+        </ul>
+      </div>
+
+      <!-- COL: SUPORTE -->
+      <div class="footer-col">
+        <h5>Suporte</h5>
+        <ul>
+          <li><a href="tutorial.html"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,7 6,10 11,4"/></svg>Tutorial de Instalação</a></li>
+          <li><a href="tutorial.html#faq"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,7 6,10 11,4"/></svg>Perguntas Frequentes</a></li>
+          <li><a href="#"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,7 6,10 11,4"/></svg>Contato</a></li>
+        </ul>
+      </div>
+
+      <!-- COL: SOBRE -->
+      <div class="footer-col">
+        <h5>Sobre</h5>
+        <ul>
+          <li><a href="#depoimentos"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,7 6,10 11,4"/></svg>Depoimentos</a></li>
+          <li><a href="#"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,7 6,10 11,4"/></svg>Privacidade</a></li>
+          <li><a href="#"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,7 6,10 11,4"/></svg>Licença</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 <strong>AFAPIT</strong> · Tecnologia Assistiva feita com cuidado · Gratuito para uso pessoal<br>Trabalho acadêmico sem fins lucrativos</div>
+      <div class="footer-social">
+        <!-- GitHub -->
+        <a href="#" class="social-btn" aria-label="GitHub"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1C4 1 1 4 1 8c0 3.1 2 5.7 4.7 6.7-.1-.4-.1-.9-.1-1.2v-1.4C4.3 12.4 3.9 11.6 3.9 11.6c-.4-1-.9-1.3-.9-1.3-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.2 1.8.9 2.3.7.1-.5.3-.9.5-1.1-1.7-.2-3.5-.9-3.5-3.8 0-.8.3-1.5.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3.7 0 1.4.1 2 .3 1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 2.9-1.8 3.6-3.5 3.8.3.2.5.7.5 1.4v2.1c0 .3 0 .8-.1 1.2C13 13.7 15 11.1 15 8c0-4-3-7-7-7z"/></svg></a>
+        <!-- Email -->
+        <a href="#" class="social-btn" aria-label="Email"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="14" height="10" rx="2"/><polyline points="1,4 8,9 15,4"/></svg></a>
+        <!-- YouTube -->
+        <a href="tutorial.html" class="social-btn" aria-label="Tutorial em vídeo"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="14" height="10" rx="2"/><polygon points="6.5,6 10.5,8 6.5,10" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
