@@ -1,0 +1,236 @@
+/* =====================================================
+   TulipaMouse – effects3d.css v3
+   Compatível com o redesign editorial v3
+   ===================================================== */
+
+/* BARRA DE PROGRESSO DE SCROLL */
+#scroll-progress {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg,#8B0A1E 0%,#C8102E 35%,#E8384F 65%,#ff8fa3 100%);
+  transform-origin: left center; transform: scaleX(0);
+  z-index: 9999; pointer-events: none;
+  box-shadow: 0 0 12px rgba(200,16,46,0.7), 0 0 4px rgba(200,16,46,1);
+}
+
+/* CANVAS DE PARTÍCULAS */
+#particle-canvas {
+  position: fixed; inset: 0; pointer-events: none; z-index: 0;
+}
+
+/* ORB DE LUZ — hero */
+.hero-glow-orb {
+  position: absolute;
+  width: 560px; height: 560px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,16,46,0.14) 0%, rgba(200,16,46,0.05) 40%, transparent 70%);
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+  pointer-events: none;
+  animation: orb-breathe 6s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+@keyframes orb-breathe {
+  0%,100% { transform: translate(-50%,-50%) scale(1);    opacity: 0.7; }
+  50%      { transform: translate(-50%,-50%) scale(1.18); opacity: 1;   }
+}
+[data-theme="dark"] .hero-glow-orb {
+  background: radial-gradient(circle, rgba(200,16,46,0.24) 0%, rgba(200,16,46,0.07) 40%, transparent 70%);
+}
+
+/* GRID DE PONTOS */
+.hero-dot-grid {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(200,16,46,0.16) 1px, transparent 1px);
+  background-size: 30px 30px;
+  -webkit-mask-image: radial-gradient(ellipse 65% 85% at 72% 50%, black 10%, transparent 78%);
+  mask-image: radial-gradient(ellipse 65% 85% at 72% 50%, black 10%, transparent 78%);
+  pointer-events: none;
+  animation: dot-pulse 7s ease-in-out infinite;
+}
+@keyframes dot-pulse { 0%,100%{opacity:0.4;} 50%{opacity:0.9;} }
+
+/* ANÉIS EM VOLTA DA TULIPA */
+.tulip-ring {
+  position: absolute; top: 50%; left: 50%;
+  border-radius: 50%; border: 1px solid rgba(200,16,46,0.1);
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+  animation: ring-expand 4.5s ease-out infinite;
+}
+.tulip-ring:nth-child(1) { width:340px; height:340px; border-color:rgba(200,16,46,0.18); animation-delay:0s; }
+.tulip-ring:nth-child(2) { width:470px; height:470px; border-color:rgba(200,16,46,0.10); animation-delay:1.3s; }
+.tulip-ring:nth-child(3) { width:600px; height:600px; border-color:rgba(200,16,46,0.06); animation-delay:2.6s; }
+@keyframes ring-expand {
+  0%   { opacity:0; transform:translate(-50%,-50%) scale(0.6); }
+  30%  { opacity:1; }
+  100% { opacity:0; transform:translate(-50%,-50%) scale(1.1); }
+}
+
+/* TULIPA — glow para img e svg */
+.tulip-wrap .tulip-photo,
+.tulip-wrap svg {
+  filter:
+    drop-shadow(0 0 45px rgba(200,16,46,0.32))
+    drop-shadow(0 24px 64px rgba(200,16,46,0.18))
+    drop-shadow(0 6px 14px rgba(0,0,0,0.09));
+  transition: filter 0.55s;
+}
+.tulip-frame:hover .tulip-photo,
+.tulip-frame:hover svg {
+  filter:
+    drop-shadow(0 0 70px rgba(200,16,46,0.50))
+    drop-shadow(0 28px 84px rgba(200,16,46,0.28))
+    drop-shadow(0 6px 18px rgba(0,0,0,0.12));
+}
+
+/* STAT CARD — glassmorphism (já em index.css, reforçamos aqui) */
+.hero-stats {
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px);
+  border: 1px solid rgba(200,16,46,0.16);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.10), inset 0 1px 0 rgba(255,255,255,1);
+}
+[data-theme="dark"] .hero-stats {
+  background: rgba(22,4,8,0.80);
+  border-color: rgba(200,16,46,0.28);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.06);
+}
+
+/* 94% GRADIENTE ANIMADO */
+.hero-stats .num {
+  background: linear-gradient(135deg, var(--red), var(--red-light));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* HERO OVERLINE */
+.hero-overline {
+  background: linear-gradient(135deg, rgba(200,16,46,0.08), rgba(232,56,79,0.12));
+  border: 1px solid rgba(200,16,46,0.2);
+  backdrop-filter: blur(8px);
+  position: relative; overflow: hidden;
+  border-radius: 50px;
+  display: inline-flex; align-items: center; gap: 0.75rem;
+}
+.hero-overline::after {
+  content: '';
+  position: absolute; top:0; left:-100%;
+  width: 60%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: badge-sweep 4s ease-in-out infinite;
+}
+@keyframes badge-sweep { 0%,60%{left:-100%;} 100%{left:200%;} }
+
+/* HERO ITALIC em */
+.hero h1 em {
+  background: linear-gradient(135deg, var(--red) 0%, var(--red-light) 55%, #ff8fa3 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+
+/* HOW VISUAL TILT */
+.how-visual {
+  transform-style: preserve-3d; will-change: transform;
+  transition: transform 0.1s ease-out, box-shadow 0.4s, border-radius 0.5s;
+  position: relative; overflow: hidden;
+}
+.how-visual .card-shine {
+  position: absolute; inset: 0; border-radius: inherit;
+  background: radial-gradient(circle at var(--shine-x,50%) var(--shine-y,50%), rgba(255,255,255,0.08) 0%, transparent 55%);
+  opacity: 0; transition: opacity 0.3s; pointer-events: none;
+}
+.how-visual:hover .card-shine { opacity: 1; }
+
+/* STEP NUMBERS glow */
+.step-num {
+  position: relative;
+  box-shadow: 0 0 0 0 rgba(200,16,46,0.5), 0 4px 16px rgba(200,16,46,0.3);
+  animation: step-pulse 3s ease-in-out infinite;
+  transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
+}
+.step:nth-child(1) .step-num { animation-delay: 0s; }
+.step:nth-child(2) .step-num { animation-delay: 0.6s; }
+.step:nth-child(3) .step-num { animation-delay: 1.2s; }
+@keyframes step-pulse {
+  0%,70%,100% { box-shadow: 0 0 0 0 rgba(200,16,46,0.5), 0 4px 16px rgba(200,16,46,0.3); }
+  35%          { box-shadow: 0 0 0 14px rgba(200,16,46,0), 0 4px 22px rgba(200,16,46,0.42); }
+}
+
+/* TESTIMONIALS card tilt */
+.test-card {
+  position: relative; overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.4s, border-color 0.4s, background 0.4s;
+  will-change: transform;
+}
+.test-card::after {
+  content: ''; position: absolute; bottom:0; left:10%; right:10%; height:1px;
+  background: linear-gradient(90deg, transparent, rgba(200,16,46,0.5), transparent);
+  opacity: 0; transform: scaleX(0); transition: opacity 0.4s, transform 0.4s;
+}
+.test-card:hover::after { opacity:1; transform:scaleX(1); }
+
+/* STAT NUMBERS — animated */
+.stat-num { transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1); }
+.stat-item:hover .stat-num { transform: scale(1.05); }
+
+/* CTA GRADIENT */
+.cta-section {
+  background: linear-gradient(130deg, #6B0518 0%, #C8102E 30%, #8B0A1E 55%, #E8384F 80%, #C8102E 100%);
+  background-size: 300% 300%;
+  animation: cta-gradient 10s ease-in-out infinite;
+}
+
+/* BUTTONS ripple + shine */
+.btn-primary, .btn-white, .btn-secondary {
+  position: relative; overflow: hidden; isolation: isolate;
+}
+.btn-ripple {
+  position: absolute; border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  transform: scale(0);
+  animation: ripple-go 0.65s ease-out forwards;
+  pointer-events: none; z-index: 0;
+}
+@keyframes ripple-go { to { transform: scale(4); opacity: 0; } }
+.btn-primary::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(105deg, transparent 20%, rgba(255,255,255,0.18) 50%, transparent 80%);
+  transform: translateX(-100%); transition: transform 0.55s ease; z-index: 0;
+}
+.btn-primary:hover::before { transform: translateX(100%); }
+.btn-primary:hover { box-shadow: 0 10px 36px rgba(200,16,46,0.55), 0 0 0 1px rgba(200,16,46,0.28); }
+
+/* NAV link underline */
+nav ul li a.nav-link { position: relative; }
+nav ul li a.nav-link::after {
+  content: ''; position: absolute; bottom: 3px; left: 50%;
+  width: 0; height: 2px; background: var(--red); border-radius: 1px;
+  transform: translateX(-50%); transition: width 0.3s cubic-bezier(0.34,1.56,0.64,1);
+}
+nav ul li a.nav-link:hover::after,
+nav ul li a.nav-link.active::after { width: 55%; }
+
+/* LOGO bounce */
+.logo-icon { transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s; }
+.logo:hover .logo-icon { transform: rotate(-8deg) scale(1.08); box-shadow: 0 6px 22px rgba(200,16,46,0.5); }
+
+/* FOOTER ORB */
+footer::after {
+  content: ''; position: absolute; right: -100px; bottom: -100px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(200,16,46,0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* PAGE IN */
+body { animation: page-in 0.5s ease both; }
+@keyframes page-in { from{opacity:0;} to{opacity:1;} }
+
+/* DARK MODE */
+[data-theme="dark"] .hero-dot-grid { opacity: 0.55; }
+
+/* Garante posicionamento */
+.hero-visual { position: relative; }
+.hero-3d-scene { position: relative; display: flex; justify-content: center; align-items: center; }
+.hero { position: relative; }
